@@ -13,6 +13,7 @@ print('==============================')
 # Calculate total test scores and averages.
 totalScore=test1 + test2 +test3
 print('The Total Test Score:', totalScore)
+
 averageScore= float(totalScore/3)
 print('Average Score:', averageScore)
 print()
