@@ -1,8 +1,8 @@
 import math
-from operator import truediv
 
 # Geometry solver class
-# Collection of methods for calculating various geometric formulas.
+# *Collection of methods for calculating various geometric formulas.
+#!Error checking has not been added yet, be careful with params
 
 
 class geometry_calculator(object):
@@ -31,7 +31,7 @@ class geometry_calculator(object):
         vol = area+depth
         return (vol)
 
-    # consider adding more volume methods
+    # todo: #2 consider adding more volume methods
 
     @staticmethod
     def volume_of_sphere(radius):
@@ -94,7 +94,6 @@ def print_menu():
     print('4. Volume of a sphere')
     print('X. Exit')
     print()  # blank line
-
 
     # If we're running this module as the main program, execute main()
 if __name__ == "__main__":
