@@ -13,6 +13,15 @@ class geometry_calculator(object):
 
     @staticmethod
     def area_of_rect(width, length):
+        """This function calculates the area of a rectangle
+
+        Args:
+            width (number): width of the box
+            length (number): length of the box
+
+        Returns:
+            number: area of the rectangle
+        """
         ans = width*length
         return (ans)
 
