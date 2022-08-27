@@ -5,10 +5,11 @@ from operator import truediv
 # Collection of methods for calculating various geometric formulas.
 
 
-class geometry_solver(object):
+class geometry_calculator(object):
     @staticmethod
     def area_of_circle(radius):
-        return (math.pi*radius**2)
+        ans = math.pi * radius**2
+        return (ans)
 
     @staticmethod
     def area_of_rect(width, length):
@@ -37,16 +38,7 @@ def main():
     running = True
 
     while (running):
-        # print the menu
-        print()  # blank line
-        print('Welcome to the Geometry Solver!')
-        print('-------------------------------')
-        print('1. Area of a circle')
-        print('2. Area of a rectangle')
-        print('3. Volume of a box')
-        print('4. Volume of a sphere')
-        print('X. Exit')
-        print()  # blank line
+        print_menu()
 
         # user selects an option.
         choice = input('Your choice? ')
@@ -56,14 +48,14 @@ def main():
         elif choice == "1":
             response = input('Radius? ')
             r = float(response)
-            ans = geometry_solver.area_of_circle(r)
+            ans = geometry_calculator.area_of_circle(r)
             print(f'Area of circle with a radius {r} is {ans}.')
         elif choice == "2":
             response = input('Width? ')
             w = float(response)
             response = input('Length? ')
             l = float(response)
-            ans = geometry_solver.area_of_rect(w, l)
+            ans = geometry_calculator.area_of_rect(w, l)
             print(f'Area of rectangle with width {w} and height {l} is {ans}.')
         elif choice == "3":
             response = input('Width? ')
@@ -72,15 +64,29 @@ def main():
             l = float(response)
             response = input('Depth? ')
             d = float(response)
-            ans = geometry_solver.volume_of_box(w, l, d)
+            ans = geometry_calculator.volume_of_box(w, l, d)
             print(
                 f'Volume of rectangle with width {w}, height {l}, and depth {d} is {ans}.')
         elif choice == "4":
             response = input('Radius? ')
             r = float(response)
-            ans = geometry_solver.volume_of_sphere(r)
+            ans = geometry_calculator.volume_of_sphere(r)
             print(f'Volume of a sphere with radius {r} is {ans}.')
 
-            # If we're running this module as the main program, execute main()
+
+def print_menu():
+    # print the menu
+    print()  # blank line
+    print('Welcome to the Geometry Solver!')
+    print('-------------------------------')
+    print('1. Area of a circle')
+    print('2. Area of a rectangle')
+    print('3. Volume of a box')
+    print('4. Volume of a sphere')
+    print('X. Exit')
+    print()  # blank line
+
+
+    # If we're running this module as the main program, execute main()
 if __name__ == "__main__":
     main()
