@@ -33,7 +33,8 @@ class Scanner:
 
 def main():
     # entered_ip = input('Enter the IP Address or range to scan: ')
-    ip = '192.168.91.129'  # entered_ip  # entered_ip
+    # '192.168.91.129'  # entered_ip  # entered_ip
+    ip = input('Enter IP Address you want to scan: ')
     scanner = Scanner(ip)
     scanner.scan(1, 22)
     scanner.write('./open_ports.txt')
